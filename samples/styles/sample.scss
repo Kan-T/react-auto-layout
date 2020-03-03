@@ -1,0 +1,36 @@
+.item {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    padding: 50px;
+    border: 15px solid rgb(189, 189, 255);
+    border-radius: 85px;
+  }
+}
+
+.demo-hook {
+  width: fit-content;
+  text-align: center;
+  h2 {
+    margin: auto;
+  }
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 4px;
+  }
+}
+
+.icon {
+  height: auto;
+  width: 14px;
+  margin-right: 5px;
+}
+
+.border {
+  border: 1px solid #757575;
+}

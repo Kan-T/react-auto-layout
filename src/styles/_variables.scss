@@ -1,0 +1,25 @@
+// Colors
+$borderColor: #757575;
+$container-bg: #ffffff;
+$header-color: #ffffff;
+$header-bg: #808080;
+
+// Fonts
+$fontSmallSize: 10px;
+$fontSize: 14px;
+
+$p-1: 2px;
+$p-2: 5px;
+$p-3: 8px;
+
+:export{
+  borderColor: $borderColor;
+  container-bg: $container-bg;
+  header-color: $header-color;
+  header-bg: $header-bg;
+  fontSize: $fontSize;
+  fontSmallSize: $fontSmallSize;
+  p-1: $p-1;
+  p-2: $p-2;
+  p-3: $p-3;
+}

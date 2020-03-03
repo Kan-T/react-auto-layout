@@ -1,0 +1,57 @@
+@import './_variables.scss';
+
+.autoLayoutContainer.default {
+  position: relative;
+  margin-right: -$p-2;
+  
+  .autoLayoutComponent {
+    display: flex;
+    flex-direction: column;
+    margin-right: $p-2;
+    margin-bottom: $p-2;
+    background: $container-bg;
+  }
+  
+  .autoLayoutHeader {
+    font-size: $fontSize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $p-2 0px;
+    background: $header-bg;
+    color: $header-color;
+  }
+
+  .autoLayoutTitle {
+    margin-left: $p-3;
+    margin-right: $p-3;
+  }
+  
+  .autoLayoutToolStyle {
+    display: flex;
+    align-items: center;
+    margin-left: $p-3;
+    .autoLayoutHeaderItem {
+      margin-right: $p-3;
+      cursor: pointer;
+    }
+  }
+  
+  .autoLayoutContent {
+    flex: 1;
+  }
+  
+  .autoLayoutMax {
+    position: absolute;
+    top: 0px !important;
+    left: 0px !important;
+    width: calc(100% - 0px) !important;
+    height: calc(100% - 0px) !important;
+    z-index: 1000;
+  }
+
+  .autoLayoutHide {
+    display: none !important;
+  }
+
+}

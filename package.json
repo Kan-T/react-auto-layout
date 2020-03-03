@@ -1,0 +1,73 @@
+{
+  "name": "react-auto-layout",
+  "version": "0.0.1",
+  "description": "A parameter driven flex layout built for React. Target for decoupling the layout component and the indivitual components in the layout.",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "LICENSE",
+    "index.js"
+  ],
+  "scripts": {
+    "start": "npm run dev",
+    "pub": "npm run build && npm publish",
+    "build": "set NODE_ENV=production && webpack --config ./config/webpack.config.prod.js",
+    "dev": "webpack-dev-server --config ./config/webpack.config.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kan-T/react-auto-layout.git"
+  },
+  "keywords": [
+    "responsive",
+    "layout",
+    "flex",
+    "react",
+    "builder"
+  ],
+  "author": "Kan Tao",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/Kan-T/react-auto-layout/issues"
+  },
+  "homepage": "https://github.com/Kan-T/react-auto-layout#readme",
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
+    "@fortawesome/free-regular-svg-icons": "^5.1.0-11",
+    "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
+    "@fortawesome/react-fontawesome": "0.1.0-11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/runtime": "^7.8.4",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.1.0",
+    "html-loader": "^0.5.5",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "standard-version": "^7.1.0",
+    "style-loader": "^1.1.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  }
+}
