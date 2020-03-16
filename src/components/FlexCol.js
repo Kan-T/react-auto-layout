@@ -5,15 +5,15 @@ const fixedStyles = {
   display: "flex",
   flexDirection: "column",
   alignItems: "stretch"
-}
+};
 
 const FlexCol = ({className, style, children}) => {
 
   return (
-    <div className={`${className||''}`} style={{...style, ...fixedStyles}}>
+    <div className={`${className||""}`} style={{...style, ...fixedStyles}}>
       {children}
     </div>
-  )
-}
+  );
+};
 
 export default FlexCol;

@@ -1,5 +1,5 @@
-import React from 'react';
-import useCount from './useCount';
+import React from "react";
+import useCount from "./useCount";
 
 function DemoHook() {
   // Declare a new state variable, which we'll call "count"

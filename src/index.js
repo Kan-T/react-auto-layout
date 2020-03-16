@@ -1,1 +1,1 @@
-module.exports = require('./components/AutoLayout.js');
+module.exports = require("./components/AutoLayout.js");

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExpandArrowsAlt } from "@fortawesome/free-solid-svg-icons/faExpandArrowsAlt";
 import { faMinus } from "@fortawesome/free-solid-svg-icons/faMinus";
@@ -9,29 +9,29 @@ export default class Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    }
+    };
 
-    this.ref = React.createRef()
-    this.child = React.cloneElement(this.props.children, {ref: this.ref})
+    this.ref = React.createRef();
+    this.child = React.cloneElement(this.props.children, {ref: this.ref});
     
   }
 
   componentDidMount () {
     if(this.ref.current && typeof(this.ref.current.setHeader) === "function") {
-      this.refresh()
+      this.refresh();
     }
   }
 
   setHeader = () => {
     if(this.ref.current && typeof(this.ref.current.setHeader) === "function") {
-      return this.ref.current.setHeader()
+      return this.ref.current.setHeader();
     }
-    return {}
+    return {};
   }
   
   genDefaultIcons = (name) => {
-    const {isEditable} = this.props
-    const {hideMinIcon, hideMaxIcon} = this.props.layout
+    const {isEditable} = this.props;
+    const {hideMinIcon, hideMaxIcon} = this.props.layout;
     return (
       <>
         {
@@ -55,7 +55,7 @@ export default class Container extends Component {
             )
           }
       </>
-    )
+    );
   }
 
   // As we get self defined components in header from this.ref.current.setHeader(), those components are children of Container. 
@@ -64,14 +64,14 @@ export default class Container extends Component {
   refresh = () => {
     // Use setTimeout, so state in header's icon and etc. would update first.
     setTimeout(() => {
-      this.setState({})
+      this.setState({});
     }, 0);
   }
 
   render() {
-    let {name, layout, unMinItem, getMaxItemClass, onRemoveItem} = this.props
-    const header = this.setHeader()
-    const isMin = this.props.miniItems.includes(name)
+    let {name, layout, unMinItem, getMaxItemClass, onRemoveItem} = this.props;
+    const header = this.setHeader();
+    const isMin = this.props.miniItems.includes(name);
 
     return (
       <div name={name} 
@@ -132,8 +132,8 @@ Container.propTypes = {
   unMinItem: PropTypes.func.isRequired,
   onMaxItem: PropTypes.func.isRequired,
   getMaxItemClass: PropTypes.func.isRequired
-}
+};
 
 Container.defaultProps = {
   name: ""
-}
+};

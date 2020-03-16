@@ -1,6 +1,6 @@
-import React from 'react';
-import imgVisibility from '../../img/visibility.svg'
-import imgVisibilityOff from '../../img/visibility-off.svg'
+import React from "react";
+import imgVisibility from "../../img/visibility.svg";
+import imgVisibilityOff from "../../img/visibility-off.svg";
 
 function VisibilityIcon({showDemoTitle, toggleDemoTitle}) {
   return (

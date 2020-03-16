@@ -6,15 +6,15 @@ const fixedStyles = {
   flexDirection: "row",
   alignItems: "stretch",
   flexWrap: "wrap"
-}
+};
 
 const FlexRow = ({className, style, children}) => {
 
   return (
-    <div className={`${className||''}`} style={{...style, ...fixedStyles}}>
+    <div className={`${className||""}`} style={{...style, ...fixedStyles}}>
       {children}
     </div>
-  )
-}
+  );
+};
 
 export default FlexRow;

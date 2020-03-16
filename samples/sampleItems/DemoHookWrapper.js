@@ -1,22 +1,22 @@
-import React, { Component } from 'react'
-import DemoTitle from './DemoTitle'
-import DemoHook from './components/DemoHook'
-import VisibilityIcon from './components/VisibilityIcon'
+import React, { Component } from "react";
+import DemoTitle from "./DemoTitle";
+import DemoHook from "./components/DemoHook";
+import VisibilityIcon from "./components/VisibilityIcon";
 
 class DemoHookWrapper extends Component {
   constructor(props){
-    super(props)
+    super(props);
     this.state = {
       showDemoTitle: true
-    }
+    };
   }
 
   toggleDemoTitle = () => {
-    this.setState({showDemoTitle: !this.state.showDemoTitle})
+    this.setState({showDemoTitle: !this.state.showDemoTitle});
   }
 
   setHeader = () => {
-    const {name} = this.props
+    const {name} = this.props;
     return {
       left: [
         <span>{`Title: ${name}`}</span>
@@ -24,11 +24,11 @@ class DemoHookWrapper extends Component {
       right: [
         <VisibilityIcon showDemoTitle={this.state.showDemoTitle} toggleDemoTitle={this.toggleDemoTitle}/>
       ]
-    }
+    };
   }
     
   render() {
-    const {name, message} = this.props
+    const {name, message} = this.props;
 
     return (
       <div className="item">
@@ -38,8 +38,8 @@ class DemoHookWrapper extends Component {
         }
         <DemoHook />
       </div>
-    )
+    );
   }
 }
 
-export default DemoHookWrapper
+export default DemoHookWrapper;

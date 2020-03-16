@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import AutoLayout from "../src";
 // import AutoLayout from "../dist";
-import DemoTitle from './sampleItems/DemoTitle';
-import DemoHookWrapper from './sampleItems/DemoHookWrapper';
+import DemoTitle from "./sampleItems/DemoTitle";
+import DemoHookWrapper from "./sampleItems/DemoHookWrapper";
 
 class LayoutSample extends Component {
     constructor(props){
@@ -91,7 +91,7 @@ class LayoutSample extends Component {
             }
           ]
         }
-      }
+      };
     }
 
     render(){
@@ -109,7 +109,7 @@ class LayoutSample extends Component {
             <DemoTitle name="Item06"/>
           </AutoLayout>
         </React.Fragment>
-      )
+      );
     }
 }
 

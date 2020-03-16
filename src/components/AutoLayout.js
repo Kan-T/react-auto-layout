@@ -1,9 +1,9 @@
-import React from "react"
-import FlexRow from "./FlexRow"
-import FlexCol from "./FlexCol"
-import Container from "./Container"
-import {findKey} from "lodash"
-import "../styles/AutoLayoutStyle.scss"
+import React from "react";
+import FlexRow from "./FlexRow";
+import FlexCol from "./FlexCol";
+import Container from "./Container";
+import {findKey} from "lodash";
+import "../styles/AutoLayoutStyle.scss";
 
 export default class AutoLayout extends React.PureComponent {
   constructor(props) {
@@ -15,7 +15,7 @@ export default class AutoLayout extends React.PureComponent {
       maxItemName: null
     };
 
-    this.children = React.Children.toArray(this.props.children)
+    this.children = React.Children.toArray(this.props.children);
   }
 
   minItem = e => {
@@ -26,42 +26,42 @@ export default class AutoLayout extends React.PureComponent {
   }
 
   unMinItem = e => {
-    let name = e.currentTarget.getAttribute("name")
-    let i = this.state.miniItems.findIndex(el => el === name)
+    let name = e.currentTarget.getAttribute("name");
+    let i = this.state.miniItems.findIndex(el => el === name);
     if(i > -1) {
-      let items = [...this.state.miniItems]
-      items.splice(i,1)
+      let items = [...this.state.miniItems];
+      items.splice(i,1);
       this.setState({ miniItems: items });
     }
   }
 
   onMaxItem = e => {
     if(this.state.maxItemName) {
-      this.setState({maxItemName: null})
+      this.setState({maxItemName: null});
     } else {
       let name = e.currentTarget.getAttribute("name");
-      this.setState({maxItemName: name})
+      this.setState({maxItemName: name});
     }
   }
 
   getMaxItemClass = maxItemName => {
     if(this.state.maxItemName === null || this.state.maxItemName !== maxItemName) {
-      return ""
+      return "";
     }else{
-      return "autoLayoutMax"
+      return "autoLayoutMax";
     }
   }
 
   genItem = (layout) => {
     switch (layout.type) {
       case "col":
-        return this.genCol(layout)
+        return this.genCol(layout);
 
       case "row":
-        return this.genRow(layout)
+        return this.genRow(layout);
 
       case "component":
-        return this.genComponent(layout)
+        return this.genComponent(layout);
 
       default:
         throw Error(`Layout's element root type is not correct. Expecting col, row, component; received: ${layout.type}`);
@@ -77,7 +77,7 @@ export default class AutoLayout extends React.PureComponent {
       <FlexCol key={layout.name} className={`autoLayoutCol ${layout.className}`} style={layout.style}>
         {Array.isArray(layout.items) && layout.items.map(this.genItem)}
       </FlexCol>
-    )
+    );
   }
 
   genRow = (layout) => {
@@ -89,7 +89,7 @@ export default class AutoLayout extends React.PureComponent {
       <FlexRow key={layout.name} className={layout.className} style={layout.style}>
         {Array.isArray(layout.items) && layout.items.map(this.genItem)}
       </FlexRow>
-    )
+    );
   }
 
   genComponent = (layout) => {
@@ -97,7 +97,7 @@ export default class AutoLayout extends React.PureComponent {
       throw Error(`Layout's element type is not correct. Expecting div or component, received: ${layout.type} with name ${layout.name}`);
     }
 
-    const child = this.children.find(child => child.props.name === layout.name)
+    const child = this.children.find(child => child.props.name === layout.name);
     return (
       <Container 
         key={layout.name}
@@ -113,12 +113,12 @@ export default class AutoLayout extends React.PureComponent {
       >
         {child}
       </Container>
-    )
+    );
   }
 
   onRemoveItem = (e) => {
-    let name = e.currentTarget.getAttribute("name")
-    let layout = {...this.state.layout}
+    let name = e.currentTarget.getAttribute("name");
+    let layout = {...this.state.layout};
   }
 
   render() {
@@ -126,6 +126,6 @@ export default class AutoLayout extends React.PureComponent {
       <div className={`autoLayoutContainer ${this.props.className}`}>
         {this.genItem(this.state.layout)}
       </div>
-    )
+    );
   }
 }
