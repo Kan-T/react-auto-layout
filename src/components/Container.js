@@ -13,7 +13,7 @@ export default class Container extends Component {
 
     this.ref = React.createRef();
     this.child = React.cloneElement(this.props.children, {ref: this.ref});
-    
+
   }
 
   componentDidMount () {
@@ -28,7 +28,7 @@ export default class Container extends Component {
     }
     return {};
   }
-  
+
   genDefaultIcons = (name) => {
     const {isEditable} = this.props;
     const {hideMinIcon, hideMaxIcon} = this.props.layout;
@@ -58,8 +58,8 @@ export default class Container extends Component {
     );
   }
 
-  // As we get self defined components in header from this.ref.current.setHeader(), those components are children of Container. 
-  // When we click those components, we changed the state of the environment where those components are defined, but Container won't update. 
+  // As we get self defined components in header from this.ref.current.setHeader(), those components are children of Container.
+  // When we click those components, we changed the state of the environment where those components are defined, but Container won't update.
   // For letting components' in header rerend, Container has to refresh.
   refresh = () => {
     // Use setTimeout, so state in header's icon and etc. would update first.
@@ -74,8 +74,8 @@ export default class Container extends Component {
     const isMin = this.props.miniItems.includes(name);
 
     return (
-      <div name={name} 
-        className={`autoLayoutComponent ${layout.className || ""} ${getMaxItemClass(name)} ${isMin? "autoLayoutHide" : ""}`} 
+      <div name={name}
+        className={`autoLayoutComponent ${layout.className || ""} ${getMaxItemClass(name)} ${isMin? "autoLayoutHide" : ""}`}
         style={layout.style}
       >
         {!layout.hideHeader && (
@@ -98,7 +98,7 @@ export default class Container extends Component {
 
             <div className="autoLayoutToolStyle">
               {header.right && header.right.map((component, i) => (
-                <span key={`${name}right${i}`} 
+                <span key={`${name}right${i}`}
                   onClick={this.refresh}
                   onChange={this.refresh}
                 >
@@ -108,7 +108,7 @@ export default class Container extends Component {
 
               {this.genDefaultIcons(name)}
 
-              {/* <FontAwesomeIcon icon={faTimes} 
+              {/* <FontAwesomeIcon icon={faTimes}
                 className="remove mr-2"
                 name={name}
                 onClick={onRemoveItem}

@@ -2,7 +2,6 @@ import React from "react";
 import FlexRow from "./FlexRow";
 import FlexCol from "./FlexCol";
 import Container from "./Container";
-import {findKey} from "lodash";
 import "../styles/AutoLayoutStyle.scss";
 
 export default class AutoLayout extends React.PureComponent {
@@ -99,7 +98,7 @@ export default class AutoLayout extends React.PureComponent {
 
     const child = this.children.find(child => child.props.name === layout.name);
     return (
-      <Container 
+      <Container
         key={layout.name}
         name={layout.name}
         layout={layout}

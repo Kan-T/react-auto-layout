@@ -6,7 +6,7 @@ function VisibilityIcon({showDemoTitle, toggleDemoTitle}) {
   return (
     <img alt="Visibility" title="toggle 'name demo'"
       src={showDemoTitle ? imgVisibilityOff : imgVisibility}
-      className="icon" 
+      className="icon"
       onClick={toggleDemoTitle}
     />
   );

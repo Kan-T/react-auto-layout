@@ -26,7 +26,7 @@ class DemoHookWrapper extends Component {
       ]
     };
   }
-    
+
   render() {
     const {name, message} = this.props;
 
