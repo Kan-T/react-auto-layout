@@ -10,8 +10,8 @@ const devConfig = {
     filename: "index.js",
     libraryTarget: "umd", // Use npm, used from node_modules
     library: "react-auto-layout", // Lib name
-    libraryExport: "default", // For working with ES6(ES2015) module system、CommonJS and AMD
-  },
+    libraryExport: "default" // For working with ES6(ES2015) module system、CommonJS and AMD
+  }
   // externals: { // Use external react components
   //   react: {
   //     root: "React",

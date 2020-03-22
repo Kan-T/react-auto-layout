@@ -97,7 +97,7 @@
     // "react/no-set-state": 0, //防止使用setState
     // "react/no-unknown-property": 2, //防止使用未知的DOM属性
     // "react/prefer-es6-class": 2, //为React组件强制执行ES5或ES6类
-    "react/prop-types": 1, //防止在React组件定义中丢失props验证
+    // "react/prop-types": 1, //Force prop-types definition
     "react/react-in-jsx-scope": 2, //Don't lose React in JSX
     "react/self-closing-comp": 0,
     "react/sort-comp": 2, //Component has order for its functions
@@ -105,9 +105,9 @@
     "react/no-array-index-key": 0,
     "react/no-deprecated": 1, //no deprecated vunc
     "react/jsx-equals-spacing": 2,
-    // "no-unreachable": 1, //不能有无法执行的代码
-    // "comma-dangle": 2, //对象字面量项尾不能有逗号
-    // "no-mixed-spaces-and-tabs": 0, //禁止混用tab和空格
+    "no-unreachable": 1, 
+    "comma-dangle": 2, //对象字面量项尾不能有逗号
+    "no-mixed-spaces-and-tabs": 0, //禁止混用tab和空格
     // "prefer-arrow-callback": 0, //比较喜欢箭头回调
     // "arrow-parens": 0, //箭头函数用小括号括起来
     "arrow-spacing": 0 // space before/after =>

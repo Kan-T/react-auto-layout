@@ -33,13 +33,13 @@ module.exports = {
             options: {
                 plugins: [
                     require("postcss-import"),
-                    require("autoprefixer"),
-                ],
-            },
+                    require("autoprefixer")
+                ]
+            }
           },
           // Compiles Sass to CSS
-          "sass-loader",
-        ],
+          "sass-loader"
+        ]
       },
       {
         test: /\.less$/,
@@ -53,18 +53,18 @@ module.exports = {
                 options: {
                     plugins: [
                         require("postcss-import"),
-                        require("autoprefixer"),
-                    ],
-                },
+                        require("autoprefixer")
+                    ]
+                }
             },
-            "less-loader",
-        ],
-      },
+            "less-loader"
+        ]
+      }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "main.min.css" // 提取后的css的文件名
     })
-  ],
+  ]
 };

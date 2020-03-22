@@ -86,7 +86,7 @@ class LayoutSample extends Component {
                     minHeight: "800px",
                     flexBasis: "300px"
                   }
-                },
+                }
               ]
             }
           ]
