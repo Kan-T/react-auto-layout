@@ -116,8 +116,8 @@ export default class AutoLayout extends React.PureComponent {
   }
 
   onRemoveItem = (e) => {
-    let name = e.currentTarget.getAttribute("name");
-    let layout = {...this.state.layout};
+    // let name = e.currentTarget.getAttribute("name");
+    // let layout = {...this.state.layout};
   }
 
   render() {
